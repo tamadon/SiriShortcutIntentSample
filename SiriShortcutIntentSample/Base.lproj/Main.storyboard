@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SiriShortcutIntentSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="ニンニク入れますか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcd-r6-pn7">
+                                <rect key="frame" x="45.666666666666657" y="234" width="284" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="cqr-pH-Zg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2l-o4-wpa">
+                                <rect key="frame" x="47.666666666666657" y="386" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G0i-UN-7K0"/>
+                                    <constraint firstAttribute="width" constant="280" id="aff-NC-Vlu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-HV-8Ia">
+                                <rect key="frame" x="130.66666666666666" y="490" width="114" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Kpd-9Q-eMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="リセット"/>
+                                <connections>
+                                    <action selector="tapResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obH-CE-0Ah"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u2l-o4-wpa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E0Q-O6-zvT"/>
+                            <constraint firstItem="u2l-o4-wpa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c2R-gz-wfc"/>
+                            <constraint firstItem="u2l-o4-wpa" firstAttribute="top" secondItem="dcd-r6-pn7" secondAttribute="bottom" constant="120" id="niC-4y-emj"/>
+                            <constraint firstItem="dcd-r6-pn7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohr-Ar-V29"/>
+                            <constraint firstItem="kUe-HV-8Ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s2k-3m-IVu"/>
+                            <constraint firstItem="kUe-HV-8Ia" firstAttribute="top" secondItem="u2l-o4-wpa" secondAttribute="bottom" constant="64" id="yqx-yc-1uI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="kUe-HV-8Ia" id="D7P-kw-6oo"/>
+                        <outlet property="toppingLabel" destination="dcd-r6-pn7" id="R86-MN-4wH"/>
+                        <outlet property="toppingTextField" destination="u2l-o4-wpa" id="Tp0-ga-PHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
